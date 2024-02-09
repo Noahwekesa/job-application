@@ -21,8 +21,19 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .nav-link {
+        color: black;
+      }
+      .nav-item:hover,
+      .nav-link:hover {
+        text-decoration: underline;
+        color: grey;
+      }
+    </style>
   </head>
   <body>
-    {% block content %} {% endblock content %}
+    {% include 'nav.html' %}
+    <div class="container mt-5">{% block content %} {% endblock content %}</div>
   </body>
 </html>
